@@ -2,7 +2,7 @@
   <img src="./assets/adi-mark.svg" width="88" alt="ADI Skills logo" />
 </p>
 
-# ADI Skills
+<h1 align="center">ADI Skills</h1>
 
 <p align="center">Understand first. Prove the result.</p>
 <p align="center">先理解，再验证。ADI 维护的个人 Agent Skills 集合。</p>
@@ -33,25 +33,39 @@ List the available skills without installing them:
 npx skills add adi0754/adi-skills --list
 ```
 
-Install the complete collection globally:
+Install the complete collection for Codex. skills.sh stores these skills in `~/.agents/skills/` (`~\.agents\skills` on Windows):
 
-全局安装全部技能：
+为 Codex 全局安装全部技能，目录为 `~/.agents/skills/`（Windows 为 `~\.agents\skills`）：
 
 ```bash
-npx skills add adi0754/adi-skills -g --skill '*' --agent codex
+npx skills add adi0754/adi-skills -g --agent codex --skill '*'
 ```
 
-Replace `codex` with `claude-code` for Claude Code. Replace the skill list to install only selected skills.
+Install selected skills for Codex:
 
-安装 Claude Code 时将 `codex` 改为 `claude-code`。按需安装时替换技能列表：
+为 Codex 按需安装技能：
 
 ```bash
 npx skills add adi0754/adi-skills -g --agent codex --skill how why teach
 ```
 
-Review the installation plan before confirming it. skills.sh can replace a skill with the same name.
+Install the complete collection for Claude Code. skills.sh stores these skills in `~/.claude/skills/` (`~\.claude\skills` on Windows):
 
-Restart the client or start a new session after installation. Check the discovered skills before invoking one.
+为 Claude Code 全局安装全部技能，目录为 `~/.claude/skills/`（Windows 为 `~\.claude\skills`）：
+
+```bash
+npx skills add adi0754/adi-skills -g --agent claude-code --skill '*'
+```
+
+Install selected skills for Claude Code:
+
+为 Claude Code 按需安装技能：
+
+```bash
+npx skills add adi0754/adi-skills -g --agent claude-code --skill how why teach
+```
+
+Review the installation plan before confirming it. skills.sh can replace a skill with the same name. Restart the client or start a new session after installation, then check the discovered skills before invoking one.
 
 先检查安装计划再确认。skills.sh 可能替换同名技能。安装后重启客户端或开始新会话，再检查技能是否已被发现。
 
