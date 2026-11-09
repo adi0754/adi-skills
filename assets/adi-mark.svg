@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">ADI Skills</title>
+  <desc id="desc">An angular letter A in a rounded blue square</desc>
+  <rect width="96" height="96" rx="24" fill="#11131a"/>
+  <path d="M25 72 43 25h11l18 47H59l-4-12H41l-4 12H25Zm20-24h7l-3.5-11L45 48Z" fill="#8b93ff"/>
+  <path d="M66 25h5v5h-5z" fill="#5eead4"/>
+</svg>

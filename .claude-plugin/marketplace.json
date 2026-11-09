@@ -1,0 +1,16 @@
+{
+  "name": "adi-skills",
+  "description": "ADI 的个人 Agent Skills 集合。",
+  "owner": {
+    "name": "ADI",
+    "url": "https://github.com/adi0754"
+  },
+  "plugins": [
+    {
+      "name": "adi-skills",
+      "source": "./",
+      "description": "ADI 的个人技能库，提供需求调研、架构设计、代码验证、技术讲解和文档写作技能。",
+      "version": "0.1.0"
+    }
+  ]
+}

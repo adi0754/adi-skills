@@ -1,0 +1,23 @@
+{
+  "name": "adi-skills",
+  "displayName": "ADI Skills",
+  "version": "0.1.0",
+  "description": "ADI 的个人技能库，提供需求调研、架构设计、代码验证、技术讲解和文档写作技能。",
+  "author": {
+    "name": "ADI",
+    "url": "https://github.com/adi0754"
+  },
+  "homepage": "https://github.com/adi0754/adi-skills",
+  "repository": "https://github.com/adi0754/adi-skills",
+  "license": "MIT",
+  "keywords": [
+    "software-design",
+    "verification",
+    "technical-writing",
+    "code-review"
+  ],
+  "skills": [
+    "./skills/"
+  ],
+  "icon": "./assets/icon.png"
+}

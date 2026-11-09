@@ -1,0 +1,20 @@
+{
+  "name": "adi-skills",
+  "interface": {
+    "displayName": "ADI Skills"
+  },
+  "plugins": [
+    {
+      "name": "adi-skills",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
