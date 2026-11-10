@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "adi-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ADI 的个人技能库，提供需求调研、架构设计、代码验证、技术讲解和文档写作技能。",
   "author": {
     "name": "ADI",

@@ -2,7 +2,7 @@ from pathlib import Path
 import json, re, sys
 root=Path(__file__).resolve().parents[1]
 errors=[]
-expected={'architect','arena','blast-radius','bro','how','in-your-own-words','ketchup','principle-attack-the-premise','principle-build-the-lever','principle-exhaust-the-design-space','principle-explain-the-number','principle-fix-root-causes','principle-foundational-thinking','principle-laziness-protocol','principle-minimize-reader-load','principle-model-the-domain','principle-prove-it-works','principle-sequence-verifiable-units','principle-subtract-before-you-add','principle-test-behavior-not-implementation','teach','technical-writing','unslop','why'}
+expected={'architect','arena','blast-radius','bro','how','in-your-own-words','ketchup','principle-attack-the-premise','principle-build-the-lever','principle-exhaust-the-design-space','principle-explain-the-number','principle-fix-root-causes','principle-foundational-thinking','principle-laziness-protocol','principle-minimize-reader-load','principle-model-the-domain','principle-prove-it-works','principle-sequence-verifiable-units','principle-subtract-before-you-add','principle-test-behavior-not-implementation','teach','technical-writing','unslop','why','statechart','create-formal-verification-skill'}
 skills={p.parent.name for p in (root/'skills').glob('*/SKILL.md')}
 if skills != expected:
  errors.append(f'Skill set differs: missing={sorted(expected-skills)}, unexpected={sorted(skills-expected)}')

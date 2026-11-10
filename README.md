@@ -8,7 +8,7 @@
 <p align="center">先理解，再验证。ADI 精选的 Agent Skills。</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/skills-24-5B5CE2" alt="24 skills" />
+  <img src="https://img.shields.io/badge/skills-26-5B5CE2" alt="26 skills" />
   <img src="https://img.shields.io/badge/install-skills.sh%20%7C%20Claude%20%7C%20Codex-181818" alt="Install with skills.sh, Claude, or Codex" />
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-2E7D32" alt="MIT license" /></a>
 </p>
@@ -19,9 +19,9 @@ ADI 精选的代码调研、方案设计、行为验证和技术沟通技能。�
 
 ## Installation / 安装
 
-Pick one method per agent. Plugins include all 24 skills. Use skills.sh to choose individual skills and their dependencies.
+Pick one method per agent. Plugins include all 26 skills. Use skills.sh to choose individual skills and their dependencies.
 
-每个客户端选择一种安装方式。插件包含全部 24 个技能；按需挑选时使用 skills.sh，并同时安装相关依赖。
+每个客户端选择一种安装方式。插件包含全部 26 个技能；按需挑选时使用 skills.sh，并同时安装相关依赖。
 
 ### skills.sh / 全局安装
 
@@ -95,6 +95,8 @@ Codex 会在启动时更新插件。安装后重启 Codex，再新建任务。
 
 | skill / 技能 | use it when / 使用它 |
 | --- | --- |
+| [`statechart`](./skills/statechart/SKILL.md) | 需要穷举状态转换中的规则违例，并把最短异常路径画成状态图。 |
+| [`create-formal-verification-skill`](./skills/create-formal-verification-skill/SKILL.md) | 需要为高风险、普通测试难覆盖的逻辑建立可重复运行的形式化验证。 |
 | [`principle-prove-it-works`](./skills/principle-prove-it-works/SKILL.md) | 宣布完成前，需要检查真实运行结果和最终产物。 |
 | [`principle-sequence-verifiable-units`](./skills/principle-sequence-verifiable-units/SKILL.md) | 多步骤需求需要拆成可独立验证的小批次。 |
 | [`principle-test-behavior-not-implementation`](./skills/principle-test-behavior-not-implementation/SKILL.md) | 需要测试用户可观察的行为，而不是绑定私有实现。 |
@@ -125,11 +127,15 @@ Codex 会在启动时更新插件。安装后重启 Codex，再新建任务。
 
 ## Dependencies and compatibility / 依赖与兼容性
 
-`architect` needs `how`, `why`, and `arena`. `teach` needs `how`, `why`, and `unslop`. `technical-writing` needs `unslop`. Plugins include all dependencies. Install them explicitly when selecting individual skills.
+`create-formal-verification-skill` uses `statechart` to read TLA+ results. `architect` needs `how`, `why`, and `arena`. `teach` needs `how`, `why`, and `unslop`. `technical-writing` needs `unslop`. Plugins include all dependencies. Install them explicitly when selecting individual skills.
 
-`architect` 依赖 `how`、`why`、`arena`；`teach` 依赖 `how`、`why`、`unslop`；`technical-writing` 依赖 `unslop`。插件已包含依赖，按需安装时请一并选择。
+`create-formal-verification-skill` 使用 `statechart` 解读 TLA+ 结果；`architect` 依赖 `how`、`why`、`arena`；`teach` 依赖 `how`、`why`、`unslop`；`technical-writing` 依赖 `unslop`。插件已包含依赖，按需安装时请一并选择。
+
+`statechart` needs a compatible TypeScript runtime and TLC. It downloads TLC and Java with `mise` on first use, or accepts `TLA2TOOLS` and `JAVA` from the local environment. `mise` is not bundled.
 
 Some skills use subagents, MCP servers, or other host tools. The [host adaptation guide](./docs/harness/host-adaptation.md) explains how to use available tools without assuming a Cursor-specific environment. Missing tools can limit parallel investigation or external evidence collection.
+
+`statechart` 需要兼容的 TypeScript 运行时和 TLC。首次使用默认通过 `mise` 下载 TLC 与 Java，也可使用本机 `TLA2TOOLS`、`JAVA` 环境变量；`mise` 不随插件打包。
 
 部分技能使用子代理、MCP 或其他客户端工具。[客户端适配说明](./docs/harness/host-adaptation.md) 说明了对应关系。客户端缺少相关工具时，并行调查和外部资料收集会受到限制。
 

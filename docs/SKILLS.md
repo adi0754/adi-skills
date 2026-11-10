@@ -25,6 +25,8 @@ Use the name to select a skill during installation or invocation. Each link open
 
 | skill / 技能 | use it when / 使用它 |
 | --- | --- |
+| [`statechart`](../skills/statechart/SKILL.md) | Exhaustively check state-transition rules and visualize the shortest path to each violation. |
+| [`create-formal-verification-skill`](../skills/create-formal-verification-skill/SKILL.md) | Build a repeatable formal check for high-risk logic that ordinary tests struggle to cover. |
 | [`principle-prove-it-works`](../skills/principle-prove-it-works/SKILL.md) | Verify the actual artifact and behavior before declaring work complete. |
 | [`principle-sequence-verifiable-units`](../skills/principle-sequence-verifiable-units/SKILL.md) | Split multi-step work into small units that each end in a verifiable state. |
 | [`principle-test-behavior-not-implementation`](../skills/principle-test-behavior-not-implementation/SKILL.md) | Test observable behavior instead of internal implementation details. |

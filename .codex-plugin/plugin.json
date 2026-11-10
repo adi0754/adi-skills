@@ -1,12 +1,12 @@
 {
   "name": "adi-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ADI 的个人技能库，提供需求调研、架构设计、代码验证、技术讲解和文档写作技能。",
   "skills": "./skills/",
   "interface": {
     "displayName": "ADI Skills",
     "shortDescription": "需求调研、设计、验证、讲解与写作技能。",
-    "longDescription": "ADI 维护的个人技能库，包含从 pstack 选取并适配的 24 个技能。",
+    "longDescription": "ADI 维护的个人技能库，包含从 pstack 选取并适配的 26 个技能。",
     "developerName": "ADI",
     "category": "Productivity"
   },
